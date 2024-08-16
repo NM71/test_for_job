@@ -12,7 +12,7 @@ class FeedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       onRefresh: () async {
-        // Implement refresh logic here
+        // Space for the refresh logic as you people said in the google form
         await Future.delayed(Duration(seconds: 2));
       },
       child: ListView.builder(

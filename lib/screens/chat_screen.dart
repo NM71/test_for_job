@@ -4,8 +4,11 @@ class MessagesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        title: Text('Message'),
+        backgroundColor: Color(0xffffffff),
+        title: Text('Message',style: TextStyle(fontWeight: FontWeight.bold),),
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -66,15 +69,17 @@ class MessageListItem extends StatelessWidget {
           Text(time, style: TextStyle(fontSize: 12)),
           SizedBox(height: 4),
           if (unreadCount > 0)
-            Container(
-              padding: EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-                unreadCount.toString(),
-                style: TextStyle(color: Colors.white, fontSize: 12),
+            Flexible( // Wrap the unread count container with Flexible
+              child: Container(
+                padding: EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle,
+                ),
+                child: Text(
+                  unreadCount.toString(),
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
               ),
             ),
         ],
@@ -83,6 +88,7 @@ class MessageListItem extends StatelessWidget {
     );
   }
 }
+
 
 class ConversationScreen extends StatelessWidget {
   @override
