@@ -49,17 +49,30 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
             icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
           ),
-          title: Text('Create Post'),
+          title: Text('Create Post', style: TextStyle(fontWeight: FontWeight.bold),),
           centerTitle: true,
           actions: [
-            TextButton(
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(Color(0xff5dc482)),
+            Padding(
+              padding: EdgeInsets.only(right: 8.0), // Add right padding to maintain spacing between buttons
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all<Color>(Color(0xff5dc482)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                  ),
+                  padding: WidgetStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(horizontal: 12, vertical: 8)), // Adding padding inside the button
+                ),
+                onPressed: _createPost,
+                child: Text(
+                  'Post',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-              onPressed: _createPost,
-              child: Text('Post', style: TextStyle(color: Colors.white)),
             ),
           ],
+
         ),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(16),
@@ -91,10 +104,10 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               ),
               SizedBox(height: 16),
               TextField(
-                maxLines: 20,
+                maxLines: 25,
                 decoration: InputDecoration(
                   hintText: 'Type something....',
-                  border: OutlineInputBorder(),
+                  border: InputBorder.none,
                 ),
                 onChanged: (value) => setState(() => postContent = value),
               ),
@@ -104,11 +117,13 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
               Wrap(
                 spacing: 8,
                 children: topics.map((topic) => ChoiceChip(
+                  backgroundColor: Color(0xffffffff),
                   label: Text(topic),
                   selected: selectedTopic == topic,
                   onSelected: (selected) {
                     if (selected) {
-                      setState(() => selectedTopic = topic);
+                      setState(() => selectedTopic = topic
+                      );
                     }
                   },
                 )).toList(),
