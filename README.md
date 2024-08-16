@@ -1,16 +1,63 @@
-# test_for_job
+# CHANCE App
 
-test for hiring
+This is a Flutter project for the CHANCE application.
+
+## Screenshots
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
+## Flutter Version
+
+This project is designed to work with Flutter versions 2.10.0 and above. It has been tested with the following versions:
+
+- Flutter 2.10.0
+- Flutter 3.0.0
+- Flutter 3.13.9
+
+If you encounter any issues related to Flutter versions, please report them in the project's issue tracker.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Ensure you have Flutter installed on your machine. If not, follow the [official Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
-A few resources to get you started if this is your first Flutter project:
+2. Clone this repository:
+   ```
+   git clone https://github.com/your-username/chance-app.git
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Navigate to the project directory:
+   ```
+   cd chance-app
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Get the dependencies:
+   ```
+   flutter pub get
+   ```
+
+5. Run the app:
+   ```
+   flutter run
+   ```
+
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Make sure your Flutter installation is up to date:
+   ```
+   flutter upgrade
+   ```
+
+2. Clean the project:
+   ```
+   flutter clean
+   flutter pub get
+   ```
+
+3. If problems persist, please check your Flutter version:
+   ```
+   flutter --version
+   ```
+   And report the issue along with your Flutter version information.
