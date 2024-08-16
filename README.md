@@ -2,15 +2,9 @@
 
 test for hiring
 
-## Getting Started
+## SCreenshots
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/user-attachments/assets/39ff5981-ff59-4bdd-9a33-2b53569f32fc)
+![image](https://github.com/user-attachments/assets/4235a1bf-9a0a-46b6-a7fb-46e913f77b40)
+![image](https://github.com/user-attachments/assets/a29fc7ea-ad7f-44a5-8830-9fbe2cf6712f)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
